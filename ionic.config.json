@@ -1,0 +1,7 @@
+{
+  "name": "PlanAhead",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
