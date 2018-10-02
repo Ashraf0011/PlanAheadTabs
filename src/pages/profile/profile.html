@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Your Profile</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+   
+    <ion-card>
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="../../assets/imgs/hqdefault.jpg">
+        </ion-avatar>
+        <h2>{{ (profileData | async )?.username }} </h2>
+        <p>This is First Name: {{ (profileData |async)?.firstname }}  </p>
+        <p>This is First Name: {{ (profileData |async)?.lastname }}  </p>
+      </ion-item>
+      <img max-width="200px" src="../../assets/imgs/hqdefault.jpg" alt="me">
+      <ion-card-content>
+        <p>descriotion</p>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
+  
