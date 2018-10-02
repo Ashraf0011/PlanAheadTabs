@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, ViewController } from 'ionic-angular';
-import { StudyPage } from '../study/study';
-import { ExercisePage } from '../exercise/exercise';
 
 @Component({
   selector: 'page-about',
@@ -22,13 +20,6 @@ export class PlanPage {
   }
   dismiss(){
     this.viewCtrl.dismiss();
-  }
-
-  addStudy(){
-    this.navCtrl.setRoot(StudyPage);
-  }
-  addExercise(){
-    this.navCtrl.setRoot(ExercisePage);
   }
 
 }

@@ -3,12 +3,15 @@
 
 
 ## Links
-
+Special thanks to these pages...  With out their existence it would be more difficult to cpmplete the app.
 ### links that helped solved issues
 url:https://github.com/angular/angularfire2/blob/master/docs/rtdb/objects.md
 
+
+### links that helped design 
 Splash Sereens: http://tobiasahlin.com
 Photos and Background: https://www.freepik.com
+ColorPicker: https://imagecolorpicker.com/en
 
 
 

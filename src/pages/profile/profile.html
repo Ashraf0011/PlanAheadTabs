@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar color="watercolor">
       <ion-title>Your Profile</ion-title>
     </ion-navbar>
   </ion-header>
@@ -12,8 +12,9 @@
           <img src="../../assets/imgs/hqdefault.jpg">
         </ion-avatar>
         <h2>{{ (profileData | async )?.username }} </h2>
-        <p>This is First Name: {{ (profileData |async)?.firstname }}  </p>
-        <p>This is First Name: {{ (profileData |async)?.lastname }}  </p>
+        <p>First Name: {{ (profileData |async)?.firstname }}  </p>
+        <p>Last Name: {{ (profileData |async)?.lastname }}  </p>
+        <p>And you are from: {{ (profileData |async)?.country }}  </p>
       </ion-item>
       <img max-width="200px" src="../../assets/imgs/hqdefault.jpg" alt="me">
       <ion-card-content>

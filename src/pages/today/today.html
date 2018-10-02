@@ -1,60 +1,122 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home/ Today</ion-title>
+<ion-header >
+  <ion-navbar color="watercolor">
+    <ion-title>Today</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Uh huh, Did today go as planned?</h2>
-
-
-  <ion-card>
-    <img src="../../assets/imgs/14249310147_700d41537f_o.JPG"/>
-    <ion-card-content>
-      <ion-card-title>
-        Study
-      </ion-card-title>
-      <p>
-        How much time did you spent today for Study?
-      </p>
-      <ion-item>
-        <ion-label>Time Spent</ion-label>
-        <ion-select [(ngModel)]="hour" multiple="false" >
-          <ion-option value="0" type="number" >0 Hours</ion-option>          
-          <ion-option value="2" type="number">2 Hours</ion-option>
-          <ion-option value="4" type="number">4 Hours</ion-option>
-          <ion-option value="6" type="number">6 Hours</ion-option>
-          <ion-option value="8" type="number">8 Hours</ion-option>
-          <ion-option value="10" type="number" >10 Hours</ion-option>
-          <ion-option value="12" type="number">12 Hours</ion-option>
-        </ion-select>
+  <h1> Tough, huh! <br> 
+    How did you do today?</h1>
+<ion-list>
+    
+    <ion-item >
+          <ion-icon item-left name="book"></ion-icon>
+          <ion-label>Study</ion-label>
+          <ion-select [(ngModel)]="study" multiple="false" >
+            <ion-option value=0 type="number">Skipped </ion-option>
+            <ion-option value=1 type="number" >1 Hour</ion-option>
+            <ion-option value=2 type="number">2 Hours</ion-option>
+            <ion-option value=3 type="number">3 Hours</ion-option>
+            <ion-option value=4 type="number">4 Hours</ion-option>
+            <ion-option value=5 type="number"> Hours</ion-option>
+            <ion-option value=6 type="number">6 Hours</ion-option>
+            <ion-option value=7 type="number">7 Hours</ion-option>
+            <ion-option value=8 type="number">8 Hours</ion-option>
+            <ion-option value=9 type="number">9 Hours</ion-option>
+            <ion-option value=10 type="number" >10 Hours</ion-option>
+            <ion-option value=11 type="number" >11 Hours</ion-option>
+            <ion-option value=12 type="number">12 Hours</ion-option>
+          </ion-select>
       </ion-item>
-    </ion-card-content>
-  </ion-card>
 
-<ion-card>
-  <img src="../../assets/imgs/14444450332_a72a0f3e38_o.JPG"/>
-  <ion-card-content>
-    <ion-card-title>
-      Exercise
-    </ion-card-title>
-    <p>
-      Could you do some Exercise today
-    </p>
-    <ion-item>
-        <ion-label>Time Spent </ion-label>
-        <ion-select [(ngModel)]="hour" multiple="false" >
-          <ion-option value="0" type="number" >0 Hours</ion-option>          
-          <ion-option value="2" type="number">2 Hours</ion-option>
-          <ion-option value="4" type="number">4 Hours</ion-option>
-          <ion-option value="6" type="number">6 Hours</ion-option>
-          <ion-option value="8" type="number">8 Hours</ion-option>
-          <ion-option value="10" type="number" >10 Hours</ion-option>
-          <ion-option value="12" type="number">12 Hours</ion-option>
-        </ion-select>
+      <ion-item >
+      
+          <ion-icon  item-left name="bicycle"></ion-icon>
+      
+          <ion-label>Exercise</ion-label>
+          <ion-select [(ngModel)]="exercise" multiple="false" >
+              <ion-option value=0 type="number">Skipped </ion-option>
+            <ion-option value=1 type="number" >1 Hour</ion-option>
+            <ion-option value=2 type="number">2 Hours</ion-option>
+            <ion-option value=3 type="number">3 Hours</ion-option>
+            <ion-option value=4 type="number">4 Hours</ion-option>
+            <ion-option value=5 type="number"> Hours</ion-option>
+            <ion-option value=6 type="number">6 Hours</ion-option>
+            <ion-option value=7 type="number">7 Hours</ion-option>
+            <ion-option value=8 type="number">8 Hours</ion-option>
+            <ion-option value=9 type="number">9 Hours</ion-option>
+            <ion-option value=10 type="number" >10 Hours</ion-option>
+            <ion-option value=11 type="number" >11 Hours</ion-option>
+            <ion-option value=12 type="number">12 Hours</ion-option>
+          </ion-select>
       </ion-item>
-  </ion-card-content>
-</ion-card>
+
+      <ion-item >
+  
+          <ion-icon item-left name="film"></ion-icon>
+
+          <ion-label>Entertainment</ion-label>
+          <ion-select [(ngModel)]="entertainment" multiple="false" >
+              <ion-option value=0 type="number">Skipped </ion-option>
+            <ion-option value=1 type="number" >1 Hour</ion-option>
+            <ion-option value=2 type="number">2 Hours</ion-option>
+            <ion-option value=3 type="number">3 Hours</ion-option>
+            <ion-option value=4 type="number">4 Hours</ion-option>
+            <ion-option value=5 type="number"> Hours</ion-option>
+            <ion-option value=6 type="number">6 Hours</ion-option>
+            <ion-option value=7 type="number">7 Hours</ion-option>
+            <ion-option value=8 type="number">8 Hours</ion-option>
+            <ion-option value=9 type="number">9 Hours</ion-option>
+            <ion-option value=10 type="number" >10 Hours</ion-option>
+            <ion-option value=11 type="number" >11 Hours</ion-option>
+            <ion-option value=12 type="number">12 Hours</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item >
+     
+          <ion-icon item-left name="bus"></ion-icon>
+  
+          <ion-label>Travel</ion-label>
+          <ion-select [(ngModel)]="bus" multiple="false" >
+              <ion-option value=0 type="number">Skipped </ion-option>
+              <ion-option value=1 type="number" >1 Hour</ion-option>
+              <ion-option value=2 type="number">2 Hours</ion-option>
+              <ion-option value=3 type="number">3 Hours</ion-option>
+              <ion-option value=4 type="number">4 Hours</ion-option>
+              <ion-option value=5 type="number"> Hours</ion-option>
+              <ion-option value=6 type="number">6 Hours</ion-option>
+              <ion-option value=7 type="number">7 Hours</ion-option>
+              <ion-option value=8 type="number">8 Hours</ion-option>
+              <ion-option value=9 type="number">9 Hours</ion-option>
+              <ion-option value=10 type="number" >10 Hours</ion-option>
+              <ion-option value=11 type="number" >11 Hours</ion-option>
+              <ion-option value=12 type="number">12 Hours</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item >
+    
+          <ion-icon item-left name="bonfire"></ion-icon>
+      
+          <ion-label>Other Activity</ion-label>
+          <ion-select [(ngModel)]="other" multiple="false" >
+              <ion-option value=0 type="number">Skipped </ion-option>
+            <ion-option value=1 type="number" >1 Hour</ion-option>
+            <ion-option value=2 type="number">2 Hours</ion-option>
+            <ion-option value=3 type="number">3 Hours</ion-option>
+            <ion-option value=4 type="number">4 Hours</ion-option>
+            <ion-option value=5 type="number"> Hours</ion-option>
+            <ion-option value=6 type="number">6 Hours</ion-option>
+            <ion-option value=7 type="number">7 Hours</ion-option>
+            <ion-option value=8 type="number">8 Hours</ion-option>
+            <ion-option value=9 type="number">9 Hours</ion-option>
+            <ion-option value=10 type="number" >10 Hours</ion-option>
+            <ion-option value=11 type="number" >11 Hours</ion-option>
+            <ion-option value=12 type="number">12 Hours</ion-option>
+          </ion-select>
+      </ion-item>
+</ion-list>
 
 
 </ion-content>

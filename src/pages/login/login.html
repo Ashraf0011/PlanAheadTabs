@@ -1,26 +1,27 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
 
-</ion-header>
-
-
-<ion-content padding>
+<ion-content padding  >
+    <h1> Welcome!!! <br> & <br> Develop Your time <br> Management Skills</h1>
+   <p>
+     Please Login Or Register to use the app. 
+   </p>
+  <ion-list >
+    
+      <ion-item>
+          <ion-label floating>Type Your Email: </ion-label>
+          <ion-input type="text" [(ngModel)]="user.email" ></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label floating >And The Password:  </ion-label>
+          <ion-input type="password" [(ngModel)]="user.password" ></ion-input>
+        </ion-item>
+  </ion-list>
   
-  <ion-item>
-    <ion-label floating >Type Your Email: </ion-label>
-    <ion-input type="text" [(ngModel)]="user.email" ></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label floating >And The Password:  </ion-label>
-    <ion-input type="password" [(ngModel)]="user.password" ></ion-input>
-  </ion-item>
-
-  <button ion-button (click)="login(user)" > Login </button>
-  <button ion-button  (click)="register()" >Register</button>
-
+  <div padding>
+      <button ion-button (click)="login(user)" > Login </button>
+      <button ion-button  (click)="register()" >Register</button>
+  </div>
+  
 </ion-content>
 <ion-footer>
     <a href="http://www.freepik.com">Background taken from  Freepik by kjpargeter.</a>

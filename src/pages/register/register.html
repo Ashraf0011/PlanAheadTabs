@@ -1,14 +1,16 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>register</ion-title>
+  <ion-navbar color="watercolor">
+    <ion-title>Resistration</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
     
+    <h1> Easy as it Looks. </h1>
+    <p>
+      To Register, you just Need to enter your Email and a Password.
+    </p>
   <ion-item>
       <ion-label floating >Type Your Email: </ion-label>
       <ion-input type="text" [(ngModel)]="user.email" ></ion-input>
@@ -20,9 +22,5 @@
     </ion-item>
 
     <button ion-button (click)="register(user)"> Register </button>
-
-
-
-  
 
 </ion-content>
