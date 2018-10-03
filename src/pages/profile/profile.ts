@@ -1,5 +1,4 @@
 
-
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -21,7 +20,7 @@ export class ProfilePage {
   ionViewDidLoad(){
     this.afAuth.authState.take(1).subscribe(data => {
       if (data && data.email && data.uid){
-        this.profileData = this.afdb.object(`profile/${data.uid}`).valueChanges();
+        this.profileData = this.afdb.object(`profile/${data.uid}/details`).valueChanges();
       }
     })
   }

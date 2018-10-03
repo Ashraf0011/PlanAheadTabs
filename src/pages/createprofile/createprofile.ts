@@ -27,7 +27,7 @@ export class CreateprofilePage {
   }
   createProfile(profile){
     this.afAuth.authState.take(1).subscribe( auth =>{
-      this.afdb.object(`profile/${auth.uid}`).set(this.profile)
+      this.afdb.object(`profile/${auth.uid}/details`).set(this.profile)
       .then(()=> this.navCtrl.setRoot(TabsPage));
 
     })

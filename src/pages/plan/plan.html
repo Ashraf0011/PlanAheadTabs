@@ -26,7 +26,7 @@
           <ion-icon name="book" item-left></ion-icon>
         
           <ion-label>Study</ion-label>
-          <ion-select [(ngModel)]="study" multiple="false" >
+          <ion-select [(ngModel)]="plansitem.study" multiple="false" >
               <ion-option value=0 type="number" >0 Hours</ion-option>
               <ion-option value=2 type="number">2 Hours</ion-option>
               <ion-option value=4 type="number">4 Hours</ion-option>
@@ -56,7 +56,7 @@
           <ion-icon name="bicycle" item-left></ion-icon>
       
           <ion-label>Exercise</ion-label>
-          <ion-select [(ngModel)]="exercise" multiple="false" >
+          <ion-select [(ngModel)]="plansitem.exercise" multiple="false" >
               <ion-option value=0 type="number" >0 Hours</ion-option>
               <ion-option value=2 type="number">2 Hours</ion-option>
               <ion-option value=4 type="number">4 Hours</ion-option>
@@ -86,7 +86,7 @@
           <ion-icon name="film"item-left></ion-icon>
   
           <ion-label>Entertainment</ion-label>
-          <ion-select [(ngModel)]="entertainment" multiple="false" >
+          <ion-select [(ngModel)]="plansitem.entertainment" multiple="false" >
               <ion-option value=0 type="number" >0 Hours</ion-option>
               <ion-option value=2 type="number">2 Hours</ion-option>
               <ion-option value=4 type="number">4 Hours</ion-option>
@@ -116,7 +116,7 @@
           <ion-icon name="bus" item-left></ion-icon>
      
           <ion-label>Travel</ion-label>
-          <ion-select [(ngModel)]="bus" multiple="false" >
+          <ion-select [(ngModel)]="plansitem.bus" multiple="false" >
               <ion-option value=0 type="number" >0 Hours</ion-option>
               <ion-option value=2 type="number">2 Hours</ion-option>
               <ion-option value=4 type="number">4 Hours</ion-option>
@@ -142,11 +142,43 @@
       </ion-item>
 
       <ion-item >
+    
+            <ion-icon name="color-palette" item-left></ion-icon>
+       
+            <ion-label>Skills</ion-label>
+            <ion-select [(ngModel)]="plansitem.skill" multiple="false" >
+                <ion-option value=0 type="number" >0 Hours</ion-option>
+                <ion-option value=2 type="number">2 Hours</ion-option>
+                <ion-option value=4 type="number">4 Hours</ion-option>
+                <ion-option value=6 type="number">6 Hours</ion-option>
+                <ion-option value=8 type="number">8 Hours</ion-option>
+                <ion-option value=10 type="number" >10 Hours</ion-option>
+                <ion-option value=12 type="number">12 Hours</ion-option>
+                <ion-option value=14  type="number" >14 Hours</ion-option>
+                <ion-option value=16  type="number" >16 Hours</ion-option>
+                <ion-option value=18  type="number">18 Hours</ion-option>
+                <ion-option value=20  type="number">20 Hours</ion-option>
+                <ion-option value=22  type="number">22 Hours</ion-option>
+                <ion-option value=24  type="number">24 Hours</ion-option>
+                <ion-option value=26   type="number">26 Hours</ion-option>
+                <ion-option value=28  type="number">28 Hours</ion-option>
+                <ion-option value=30  type="number" >30 Hours</ion-option>
+                <ion-option value=32  type="number">32 Hours</ion-option>
+                <ion-option value=34  type="number">34 Hours</ion-option>
+                <ion-option value=36  type="number">36 Hours</ion-option>
+                <ion-option value=38  type="number">38 Hours</ion-option>
+                <ion-option value=40  type="number">40 Hours</ion-option>
+            </ion-select>
+        </ion-item>
+
+
+
+      <ion-item >
 
           <ion-icon name="bonfire" item-left></ion-icon>
  
           <ion-label>Other Activity</ion-label>
-          <ion-select [(ngModel)]="other" multiple="false" >
+          <ion-select [(ngModel)]="plansitem.other" multiple="false" >
               <ion-option value=0 type="number" >0 Hours</ion-option>
               <ion-option value=2 type="number">2 Hours</ion-option>
               <ion-option value=4 type="number">4 Hours</ion-option>
@@ -170,6 +202,13 @@
               <ion-option value=40  type="number">40 Hours</ion-option>
           </ion-select>
       </ion-item>
+
+        <ion-buttons end>
+            <button ion-button outline icon-right color="dark" (click)="saveToPlans()" >
+                Save this Target
+            </button>
+        </ion-buttons>
+      
 
     </ion-list>
 
