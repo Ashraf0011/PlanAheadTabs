@@ -1,12 +1,8 @@
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the SummaryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +11,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SummaryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  updateData: Observable<any>;
+  planData: Observable<any>;
+
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
+    private afAuth: AngularFireAuth, 
+    private afdb: AngularFireDatabase) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SummaryPage');
+
+    this.afAuth.authState.take(1).subscribe(data => {
+      if (data && data.email && data.uid){
+        this.updateData = this.afdb.object(`profile/${data.uid}/activity`).valueChanges();
+        this.planData = this.afdb.object(`profile/${data.uid}/plans`).valueChanges();
+      }
+    })
+
+
   }
 
 }

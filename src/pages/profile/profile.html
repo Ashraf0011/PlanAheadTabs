@@ -6,21 +6,23 @@
   
   <ion-content padding>
    
-    <ion-card>
+    <ion-card max-width="400px" >
       <ion-item>
         <ion-avatar item-left>
-          <img src="../../assets/imgs/hqdefault.jpg">
+          <img src="../../assets/imgs/avatar.png">
         </ion-avatar>
         <h2>{{ (profileData | async )?.username }} </h2>
         <p>First Name: {{ (profileData |async)?.firstname }}  </p>
         <p>Last Name: {{ (profileData |async)?.lastname }}  </p>
         <p>And you are from: {{ (profileData |async)?.country }}  </p>
       </ion-item>
-      <img max-width="200px" src="../../assets/imgs/hqdefault.jpg" alt="me">
+      <img width="300px" src="../../assets/imgs/contact.png" alt="profile picture">
       <ion-card-content>
         <p>descriotion</p>
       </ion-card-content>
     </ion-card>
 
   </ion-content>
-  
+<ion-footer>
+    <a href="https://www.freepik.com/free-vector/businessman-with-doubts_1104405.htm">photos taken from Freepik</a>
+</ion-footer>  

@@ -7,5 +7,27 @@
 
 
 <ion-content padding>
+    <ion-list >
+        <ion-list-header> Your Plan of [Data] </ion-list-header>
+        <ion-item>Study:  {{ (planData | async )?.study }}</ion-item>
+        <ion-item>exercise:  {{ (planData | async )?.exercise }}</ion-item>
+        <ion-item>Learning New skills:  {{ (planData | async )?.skill }}</ion-item>
+        <ion-item>Travel:  {{ (planData | async )?.bus }}</ion-item>
+        <ion-item>Entertainment:  {{ (planData | async )?.entertainment }}</ion-item>
+        <ion-item>Other activity:  {{ (planData | async )?.other }}</ion-item>
+      </ion-list>
+
+
+
+<ion-list >
+  <ion-list-header> Your activity of [Date] </ion-list-header>
+  <ion-item>[date] Study:  {{ (updateData | async )?.study }}</ion-item>
+  <ion-item>[date] exercise:  {{ (updateData | async )?.exercise }}</ion-item>
+  <ion-item>[date] Learning New skills:  {{ (updateData | async )?.skill }}</ion-item>
+  <ion-item>[date] Travel:  {{ (updateData | async )?.bus }}</ion-item>
+  <ion-item>[date] Entertainment:  {{ (updateData | async )?.entertainment }}</ion-item>
+  <ion-item>[date] Other activity:  {{ (updateData | async )?.other }}</ion-item>
+</ion-list>
+
 
 </ion-content>

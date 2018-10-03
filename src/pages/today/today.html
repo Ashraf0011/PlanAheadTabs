@@ -12,7 +12,7 @@
     <ion-item >
           <ion-icon item-left name="book"></ion-icon>
           <ion-label>Study</ion-label>
-          <ion-select [(ngModel)]="study" multiple="false" >
+          <ion-select [(ngModel)]="activity.study" multiple="false" >
             <ion-option value=0 type="number">Skipped </ion-option>
             <ion-option value=1 type="number" >1 Hour</ion-option>
             <ion-option value=2 type="number">2 Hours</ion-option>
@@ -34,7 +34,7 @@
           <ion-icon  item-left name="bicycle"></ion-icon>
       
           <ion-label>Exercise</ion-label>
-          <ion-select [(ngModel)]="exercise" multiple="false" >
+          <ion-select [(ngModel)]="activity.exercise" multiple="false" >
               <ion-option value=0 type="number">Skipped </ion-option>
             <ion-option value=1 type="number" >1 Hour</ion-option>
             <ion-option value=2 type="number">2 Hours</ion-option>
@@ -56,7 +56,7 @@
           <ion-icon item-left name="film"></ion-icon>
 
           <ion-label>Entertainment</ion-label>
-          <ion-select [(ngModel)]="entertainment" multiple="false" >
+          <ion-select [(ngModel)]="activity.entertainment" multiple="false" >
               <ion-option value=0 type="number">Skipped </ion-option>
             <ion-option value=1 type="number" >1 Hour</ion-option>
             <ion-option value=2 type="number">2 Hours</ion-option>
@@ -78,7 +78,7 @@
           <ion-icon item-left name="bus"></ion-icon>
   
           <ion-label>Travel</ion-label>
-          <ion-select [(ngModel)]="bus" multiple="false" >
+          <ion-select [(ngModel)]="activity.bus" multiple="false" >
               <ion-option value=0 type="number">Skipped </ion-option>
               <ion-option value=1 type="number" >1 Hour</ion-option>
               <ion-option value=2 type="number">2 Hours</ion-option>
@@ -97,10 +97,32 @@
 
       <ion-item >
     
+            <ion-icon item-left name="color-palette"></ion-icon>
+        
+            <ion-label>Skills</ion-label>
+            <ion-select [(ngModel)]="activity.skill" multiple="false" >
+                <ion-option value=0 type="number">Skipped </ion-option>
+              <ion-option value=1 type="number" >1 Hour</ion-option>
+              <ion-option value=2 type="number">2 Hours</ion-option>
+              <ion-option value=3 type="number">3 Hours</ion-option>
+              <ion-option value=4 type="number">4 Hours</ion-option>
+              <ion-option value=5 type="number">5 Hours</ion-option>
+              <ion-option value=6 type="number">6 Hours</ion-option>
+              <ion-option value=7 type="number">7 Hours</ion-option>
+              <ion-option value=8 type="number">8 Hours</ion-option>
+              <ion-option value=9 type="number">9 Hours</ion-option>
+              <ion-option value=10 type="number" >10 Hours</ion-option>
+              <ion-option value=11 type="number" >11 Hours</ion-option>
+              <ion-option value=12 type="number">12 Hours</ion-option>
+            </ion-select>
+        </ion-item>
+
+      <ion-item >
+    
           <ion-icon item-left name="bonfire"></ion-icon>
       
           <ion-label>Other Activity</ion-label>
-          <ion-select [(ngModel)]="other" multiple="false" >
+          <ion-select [(ngModel)]="activity.other" multiple="false" >
               <ion-option value=0 type="number">Skipped </ion-option>
             <ion-option value=1 type="number" >1 Hour</ion-option>
             <ion-option value=2 type="number">2 Hours</ion-option>
@@ -119,8 +141,8 @@
 
       
      <ion-buttons end>
-            <button ion-button outline>
-                    Update today's info.
+            <button ion-button outline (click)="update()" >
+                    Update today's Entry
                   </button>
       </ion-buttons> 
           
