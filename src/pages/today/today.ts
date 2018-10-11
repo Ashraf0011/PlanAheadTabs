@@ -3,6 +3,8 @@ import { activityupdate } from '../../models/activityupdate';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
+
 
 
 @Component({
@@ -15,12 +17,22 @@ export class TodayPage {
 
   constructor(public navCtrl: NavController,
     private afAuth: AngularFireAuth,
-    private afdb: AngularFireDatabase) {
+    private afdb: AngularFireDatabase,
+    private toastCtrl: ToastController) {
    
   }
   update(){
     this.afAuth.authState.take(1).subscribe(auth => {
-      this.afdb.object(`profile/${auth.uid}/activity`).set(this.activity)
+      this.afdb.object(`profile/${auth.uid}/weeks/activity`).set(this.activity)
+        
+      
+      let toast = this.toastCtrl.create({
+          message: 'Activity Updated to database. Thnks for using Planner.',
+          duration: 2000,
+          position: 'bottom'
+        });
+        toast.present();
+      
     })
   }
   

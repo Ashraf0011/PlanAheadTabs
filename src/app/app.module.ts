@@ -1,6 +1,6 @@
 import { WelcomePage } from './../pages/welcome/welcome';
 import { CreateprofilePage } from './../pages/createprofile/createprofile';
-import { StudyPage } from './../pages/study/study';
+
 import { LoginPage } from './../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -21,7 +21,7 @@ import { SummaryPage } from '../pages/summary/summary';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ExercisePage } from '../pages/exercise/exercise';
+
 
 
 const config = {
@@ -38,8 +38,6 @@ const config = {
     MyApp,
     WelcomePage,
     PlanPage,
-    StudyPage,
-    ExercisePage,
     SummaryPage,
     TodayPage,
     ProfilePage,
@@ -61,8 +59,6 @@ const config = {
     MyApp,
     WelcomePage,
     PlanPage,
-    StudyPage,
-    ExercisePage,
     SummaryPage,
     TodayPage,
     ProfilePage,

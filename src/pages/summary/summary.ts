@@ -25,8 +25,8 @@ export class SummaryPage {
 
     this.afAuth.authState.take(1).subscribe(data => {
       if (data && data.email && data.uid){
-        this.updateData = this.afdb.object(`profile/${data.uid}/activity`).valueChanges();
-        this.planData = this.afdb.object(`profile/${data.uid}/plans`).valueChanges();
+        this.updateData = this.afdb.object(`profile/${data.uid}/weeks/activity`).valueChanges();
+        this.planData = this.afdb.object(`profile/${data.uid}/weeks/plans`).valueChanges();
       }
     })
 
