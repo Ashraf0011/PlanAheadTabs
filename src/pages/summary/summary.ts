@@ -14,6 +14,7 @@ export class SummaryPage {
   updateData: Observable<any>;
   planData: Observable<any>;
 
+
   constructor(public navCtrl: NavController, 
     public navParams: NavParams,
     private afAuth: AngularFireAuth, 
@@ -27,7 +28,11 @@ export class SummaryPage {
       if (data && data.email && data.uid){
         this.updateData = this.afdb.object(`profile/${data.uid}/weeks/activity`).valueChanges();
         this.planData = this.afdb.object(`profile/${data.uid}/weeks/plans`).valueChanges();
+
+       
+
       }
+
     })
 
 
