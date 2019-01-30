@@ -25,12 +25,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 const config = {
-  apiKey: "AIzaSyA1NOjyZl_h_jeRauzmKLFPDLZofH-r0ms",
-  authDomain: "myplannerappwithfirestore.firebaseapp.com",
-  databaseURL: "https://myplannerappwithfirestore.firebaseio.com",
-  projectId: "myplannerappwithfirestore",
-  storageBucket: "myplannerappwithfirestore.appspot.com",
-  messagingSenderId: "673975233938"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
 };
 
 @NgModule({
